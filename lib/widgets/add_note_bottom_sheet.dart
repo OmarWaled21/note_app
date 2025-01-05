@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -15,7 +13,7 @@ class AddNoteButtonSheet extends StatelessWidget {
     return BlocConsumer<AddNoteCubit, AddNoteState>(
       listener: (context, state) {
         if (state is AddNoteFailure) {
-          log('faild');
+          debugPrint('faild');
         } else if (state is AddNoteSuccess) {
           Navigator.pop(context);
           showSnackBar(context, 'Success');
