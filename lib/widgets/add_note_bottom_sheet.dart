@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app_training/constants/media_query_values_extintions.dart';
-import 'package:note_app_training/views/notes/widgets/custom_button.dart';
-import 'package:note_app_training/views/notes/widgets/custom_text_field.dart';
+import 'package:note_app_training/widgets/custom_button.dart';
+import 'package:note_app_training/widgets/custom_text_field.dart';
 
 class AddNoteButtonSheet extends StatelessWidget {
   const AddNoteButtonSheet({super.key});
