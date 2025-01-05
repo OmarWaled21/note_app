@@ -3,7 +3,9 @@ import 'package:note_app_training/constants/consts.dart';
 import 'package:note_app_training/constants/media_query_values_extintions.dart';
 
 class CustomBotton extends StatelessWidget {
-  const CustomBotton({super.key});
+  const CustomBotton({super.key, required this.onTap});
+
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class CustomBotton extends StatelessWidget {
       minWidth: context.screenWidth,
       color: kCyanColor,
       textColor: Colors.black,
-      onPressed: () {},
+      onPressed: onTap,
       child: const Text(
         'Add',
         style: TextStyle(
