@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app_training/constants/colors.dart';
+import 'package:note_app_training/constants/consts.dart';
 import 'package:note_app_training/constants/media_query_values_extintions.dart';
 
 class CustomBotton extends StatelessWidget {
