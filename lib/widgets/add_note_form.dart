@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app_training/constants/media_query_values_extintions.dart';
 import 'package:note_app_training/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app_training/models/note_model.dart';
-import 'package:note_app_training/widgets/colors_list_view.dart';
+import 'package:note_app_training/widgets/add_note_colors_list_view.dart';
 import 'package:note_app_training/widgets/custom_button.dart';
 import 'package:note_app_training/widgets/custom_text_form_field.dart';
 
@@ -41,6 +41,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           ),
           SizedBox(height: context.screenHeight * 0.05),
           const ColorsListView(),
+          const SizedBox(height: 16),
           buildSubbmitButton(),
         ],
       ),
