@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:intl/intl.dart';
+import 'package:note_app_training/cubits/notes_cubit/notes_cubit.dart';
 import 'package:note_app_training/helper/format_date.dart';
 import 'package:note_app_training/models/note_model.dart';
 import 'package:note_app_training/views/edit_note_view.dart';
@@ -41,7 +42,11 @@ class CustomNoteItem extends StatelessWidget {
               trailing: Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+
+                    BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.trash,
                     color: Colors.black,
@@ -52,8 +57,10 @@ class CustomNoteItem extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 32),
-              child: Text(FormatDate().formatDate(note.date),
-                  style: TextStyle(color: Colors.black.withAlpha(125))),
+              child: Text(
+                FormatDate().formatDate(note.date),
+                style: TextStyle(color: Colors.black.withAlpha(125)),
+              ),
             ),
           ],
         ),

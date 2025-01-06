@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app_training/constants/media_query_values_extintions.dart';
 import 'package:note_app_training/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:note_app_training/cubits/notes_cubit/notes_cubit.dart';
 import 'package:note_app_training/helper/show_snack_bar.dart';
 import 'package:note_app_training/widgets/add_note_form.dart';
 
@@ -15,8 +16,9 @@ class AddNoteButtonSheet extends StatelessWidget {
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
           if (state is AddNoteFailure) {
-            debugPrint('failed : ${state.err}');
+            showSnackBar(context, 'failed');
           } else if (state is AddNoteSuccess) {
+            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
             Navigator.pop(context);
             showSnackBar(context, 'Success');
           }
