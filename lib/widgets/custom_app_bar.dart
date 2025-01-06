@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:note_app_training/widgets/custom_search_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar(
-      {super.key,
-      required this.appTitle,
-      required this.onTap,
-      required this.icon});
+  const CustomAppBar({
+    super.key,
+    required this.appTitle,
+    required this.onTap,
+    required this.icon,
+  });
 
   final String appTitle;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final IconData icon;
 
   @override
