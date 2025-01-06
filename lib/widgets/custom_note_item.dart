@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:note_app_training/helper/format_date.dart';
 import 'package:note_app_training/models/note_model.dart';
 import 'package:note_app_training/views/edit_note_view.dart';
 
@@ -51,7 +52,7 @@ class CustomNoteItem extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 32),
-              child: Text(formatDate(note.date),
+              child: Text(FormatDate().formatDate(note.date),
                   style: TextStyle(color: Colors.black.withAlpha(125))),
             ),
           ],
@@ -59,10 +60,4 @@ class CustomNoteItem extends StatelessWidget {
       ),
     );
   }
-}
-
-String formatDate(String date) {
-  var dateTime = DateTime.parse(date);
-  var formattedDate = DateFormat('MMM D, yy').format(dateTime);
-  return formattedDate;
 }
