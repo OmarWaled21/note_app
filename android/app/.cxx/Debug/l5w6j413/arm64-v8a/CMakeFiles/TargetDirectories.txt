@@ -1,0 +1,2 @@
+C:/Users/OmarWela/Desktop/Training_Projects/note_app_training/android/app/.cxx/Debug/l5w6j413/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/OmarWela/Desktop/Training_Projects/note_app_training/android/app/.cxx/Debug/l5w6j413/arm64-v8a/CMakeFiles/rebuild_cache.dir
