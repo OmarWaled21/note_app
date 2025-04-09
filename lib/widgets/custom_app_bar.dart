@@ -6,12 +6,12 @@ class CustomAppBar extends StatelessWidget {
     super.key,
     required this.appTitle,
     required this.onTap,
-    required this.icon,
+    this.icon,
   });
 
   final String appTitle;
   final VoidCallback? onTap;
-  final IconData icon;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
